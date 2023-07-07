@@ -17,6 +17,8 @@ You can check by executing `nvidia-smi`.
 ```bash
 conda create -n reex python=3.9 conda-build
 
+conda activate reex
+
 pip install allennlp==2.10.0
 ```
 
@@ -36,6 +38,8 @@ Now Install remaining dependencies.
 pip install -r requirements.txt
 
 conda develop .
+
+python -m spacy download en_core_web_sm
 ```
 
 ## Model Training
@@ -137,3 +141,20 @@ Result should be
 ```
 
 which are the results for the base model in the paper.
+
+## Computing Model Semantic Extent Evaluations
+
+To compute the semantic extents for a model, specify
+
+- Path to model archive, for example, `pretrained_models/model_base.tar.gz`
+- Path to test data, for example, `../ace_preprocessing/preprocessed_relation_classification_data/test.jsonl`
+- Path to output result. select file in `explanaitions` directory to reproduce further results conveniently.
+
+and execute the following command
+
+```
+python explain/explanaition.py <PATH_TO .tar.gz> <PATH_TO_TEST_DATA> <RESULT_JSONL_PATH>
+```
+
+You might want to reduce the number of evaluation samples with the `--subset_size` parameter.
+computation might take up to ~1 Minute per sample.
