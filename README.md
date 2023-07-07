@@ -75,6 +75,26 @@ trainer: {
 }
 ```
 
+If your GPU runs out of memory, you can change the batch size in the configuration.
+
+```
+    data_loader: {
+        batch_sampler:{
+            batch_size: 32, # Change this to a smaller value if necessary
+            type: 'bucket',
+        },
+    },
+```
+
+You can also specify whether to train base or large version by changing the comment in the first
+two lines of the config file. By default we train the base version.
+
+```
+# local bert_model = "roberta-large";
+local bert_model = "roberta-base"; # here we train the base version
+```
+
+
 Change the ` -s <OUT PATH>` parameter to your desired location.
 
 ```bash

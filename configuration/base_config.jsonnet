@@ -1,4 +1,5 @@
-local bert_model = "roberta-large";
+# local bert_model = "roberta-large";
+local bert_model = "roberta-base";
 local bert_dim = 1024;
 
 local learn_rate = 1e-4;
@@ -21,7 +22,7 @@ local learn_rate = 1e-4;
 
     data_loader: {
         batch_sampler:{
-            batch_size: 2,
+            batch_size: 32,
             type: 'bucket',
         },
     },
