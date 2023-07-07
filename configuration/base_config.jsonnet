@@ -11,9 +11,9 @@ local learn_rate = 1e-4;
         // These other parameters exactly match the constructor parameters of your dataset reader class.
     },
 
-    train_data_path: "/home/lars/Projects/ace_preprocessing/preprocessed_relation_classification_data/train.jsonl",
-    validation_data_path: "/home/lars/Projects/ace_preprocessing/preprocessed_relation_classification_data/dev.jsonl",
-    test_data_path: "/home/lars/Projects/ace_preprocessing/preprocessed_relation_classification_data/test.jsonl",
+    train_data_path: "../ace_preprocessing/preprocessed_relation_classification_data/train.jsonl",
+    validation_data_path: "../ace_preprocessing/preprocessed_relation_classification_data/dev.jsonl",
+    test_data_path: "../ace_preprocessing/preprocessed_relation_classification_data/test.jsonl",
     evaluate_on_test: true,
     model: {
         type: "sequence_classification",
