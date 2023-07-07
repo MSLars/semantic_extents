@@ -86,6 +86,7 @@ Especially on CPU training is time consuming, we recomment GPU training.
 ## Load pretrained model
 
 Finetuned based version: https://fh-aachen.sciebo.de/s/H8rnAeOBp8M6Zmq
+
 Finetuned Large version: https://fh-aachen.sciebo.de/s/rCreVe4yw7LjjOb
 
 You can see the models metrics in the directory `model_meta`.
