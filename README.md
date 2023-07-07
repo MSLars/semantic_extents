@@ -51,7 +51,7 @@ directory.
 
 Your configuration could look like:
 
-```json lines
+```
 {
   train_data_path: "<path to cloned repo>/ace_preprocessing/preprocessed_relation_classification_data/train.jsonl",
   validation_data_path: "<path to cloned repo>/ace_preprocessing/preprocessed_relation_classification_data/dev.jsonl",
@@ -62,7 +62,7 @@ Your configuration could look like:
 Specify whether to use a GPU for training (-1 for no GPU or 0...n for a specific GPU. 
 For example 0 if you have only one available GPU). Default is GPU training.
 
-```json lines
+```
 trainer: {
     validation_metric: "+f1-macro-overall",
     num_epochs: 50,
